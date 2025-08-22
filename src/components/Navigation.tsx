@@ -101,9 +101,9 @@ export const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                <Button variant="outline" className="btn-glass">
+                {/* <Button variant="outline" className="btn-glass">
                   Login
-                </Button>
+                </Button> */}
                 <Button className="btn-primary">Get Started</Button>
               </div>
             </div>

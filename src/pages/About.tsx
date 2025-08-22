@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Target, Eye, Heart, Calendar, TrendingUp, Users, Award } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollAnimations } from "@/components/ScrollAnimations";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 const About = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -160,12 +161,12 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="fade-in-left">
                 <p className="text-lg text-muted-foreground mb-6">
-                  FutureFlow HR was born from a simple observation: the traditional approach to HR consulting 
+                  Optifusion Technologies HR was born from a simple observation: the traditional approach to HR consulting 
                   wasn't keeping pace with the rapidly evolving business landscape. Companies needed smarter, 
                   faster, and more efficient ways to find and retain top talent.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Our founders, with over 20 years of combined experience in HR and technology, set out to 
+                  we have combined experience in HR and technology set out to 
                   create a consultancy that would leverage cutting-edge AI and data analytics while maintaining 
                   the personal touch that makes all the difference in human resources.
                 </p>
@@ -180,19 +181,19 @@ const About = () => {
                   <CardContent className="p-8">
                     <div className="grid grid-cols-2 gap-6 text-center">
                       <div>
-                        <div className="text-3xl font-bold gradient-text mb-2">2022</div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> 20<AnimatedCounter end={22} /></div>
                         <div className="text-sm text-muted-foreground">Founded</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold gradient-text mb-2">500+</div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={500} suffix={"+"} /></div>
                         <div className="text-sm text-muted-foreground">Placements</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold gradient-text mb-2">50+</div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={50} suffix={"+"} /></div>
                         <div className="text-sm text-muted-foreground">Companies</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold gradient-text mb-2">95%</div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={95} suffix={"%"} /></div>
                         <div className="text-sm text-muted-foreground">Success Rate</div>
                       </div>
                     </div>

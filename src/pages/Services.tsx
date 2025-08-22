@@ -11,6 +11,9 @@ import PricingCard from "@/components/PricingCard";
 const Services = () => {
 const [billingPeriod, setBillingPeriod] = useState("monthly");
 
+  const handleWhatsApp = ()=>{
+    window.open("https://wa.me/919928610677?text=Hi!%20interested%20in%20exploring%20your%20talent%20acquisition%20services.%20I%20would%20like%20to%20book%20a%20free%20demo%20and%20see%20a%20few%20candidate%20profiles.%20Can%20we%20schedule%20it%3F", "_blank")
+  }
 
   const services = [
     {
@@ -285,7 +288,7 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
                 Let's discuss how we can help you find the perfect talent.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="btn-primary text-lg px-8 py-4">
+                <Button onClick={handleWhatsApp} size="lg" className="btn-primary text-xs sm:text-lg px-8 py-4">
                   Schedule Free Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>

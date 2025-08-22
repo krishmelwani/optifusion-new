@@ -18,13 +18,13 @@ const scrollRef = useRef(null);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: -270, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: 270, behavior: "smooth" });
     }
   };
 
@@ -116,7 +116,7 @@ const scrollRef = useRef(null);
         
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text animate-gradient">
+            <h1 className="text-5xl md:text-8xl font-bold mb-6 gradient-text animate-gradient">
              Optifusion Technologies
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -152,8 +152,8 @@ const scrollRef = useRef(null);
               Why Choose  Optifusion Technologies?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We combine cutting-edge technology with human expertise to deliver 
-              unparalleled HR solutions that drive real business results.
+              hiring the right talent is vital to your success. We take the time to understand your company’s culture, values, and goals to connect you with candidates who are skilled and align with your unique work environment. This approach helps build engaged, cohesive teams that support long-term growth.
+Our transparent and collaborative process keeps you informed at every stage. By prioritizing quality and fit over quantity, we help you make confident hiring decisions tailored to your evolving needs. Partner with Optifusion for personalized talent acquisition solutions that keep your business competitive in today’s fast-changing market
             </p>
           </div>
 
@@ -192,9 +192,9 @@ const scrollRef = useRef(null);
       {/* Scroll Buttons */}
       <button
         onClick={scrollLeft}
-        className="absolute -left-6 top-1/2 transform -translate-y-1/2 bg-indigo-700 shadow-md rounded-full p-2 z-10"
+        className= {`absolute -left-6 top-1/2 transform -translate-y-1/2 bg-indigo-700 shadow-md rounded-full p-2 z-10`}
       >
-        <ChevronLeft className="w-8 h-8" />
+        <ChevronLeft className="w-4 h-4 sm:w-8 sm:h-8" />
       </button>
 
       <div
@@ -205,9 +205,9 @@ const scrollRef = useRef(null);
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[400px] scroll-snap-align-start"
+            className="flex-shrink-0 w-[250px]  md:w-[400px] scroll-snap-align-start"
           >
-            <Card className="glass hover-lift fade-in-up min-h-[250px]">
+            <Card className="glass hover-lift fade-in-up min-h-[350px] md:min-h-[250px]">
               <CardContent className="p-8">
                 <p className="text-muted-foreground mb-6 italic">
                   "{testimonial.content}"
@@ -228,7 +228,7 @@ const scrollRef = useRef(null);
         onClick={scrollRight}
         className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-indigo-700 shadow-md rounded-full p-2 z-10"
       >
-        <ChevronRight className="w-8 h-8" />
+        <ChevronRight className="w-4 h-4 sm:w-8 sm:h-8" />
       </button>
     </div>
 

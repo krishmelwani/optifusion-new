@@ -50,9 +50,9 @@ export default function PricingCard() {
   const plan = pricingPlans[selectedPlan];
 
   return (
-    <div className="max-w-[60vw] mx-auto  ">
+    <div className=" max-w-[90vw] md:max-w-[60vw] mx-auto  ">
       {/* Switch Buttons */}
-      <div className="flex justify-center gap-2 mb-6 bg-gray-800 rounded-xl p-1">
+      <div className="flex justify-center gap-2 mb-6 bg-gray-800 rounded-xl p-1 ">
         {Object.keys(pricingPlans).map((key) => (
           <button
             key={key}

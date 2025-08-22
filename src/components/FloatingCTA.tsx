@@ -18,6 +18,10 @@ export const FloatingCTA = () => {
 
   if (!isVisible) return null;
 
+  
+  const handleWhatsApp = ()=>{
+    window.open("https://wa.me/919928610677?text=Hi!%20interested%20in%20exploring%20your%20talent%20acquisition%20services.%20I%20would%20like%20to%20book%20a%20free%20demo%20and%20see%20a%20few%20candidate%20profiles.%20Can%20we%20schedule%20it%3F", "_blank")
+  }
   return (
     <div className="fixed bottom-6 right-6 z-40">
       {isExpanded ? (
@@ -37,7 +41,7 @@ export const FloatingCTA = () => {
             Ready to transform your HR processes? Let's discuss your needs and find the perfect solution.
           </p>
           <div className="space-y-3">
-            <Button className="w-full btn-primary">
+            <Button  onClick={handleWhatsApp} className="w-full btn-primary">
               <Phone className="w-4 h-4 mr-2" />
               Schedule Call
             </Button>

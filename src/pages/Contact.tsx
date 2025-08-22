@@ -26,19 +26,19 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office Location",
-      details: ["123 Business District", "San Francisco, CA 94102", "United States"],
+      details: ["267 b Sindhi colony raja park ",  "Jaipur Rajasthan 302004"],
       action: "Get Directions"
     },
     {
       icon: Phone,
       title: "Phone Numbers",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543", "Mon-Fri 9AM-6PM PST"],
+      details: ["+91 9928610677", , "Mon - Fri 9AM-6PM PST"],
       action: "Call Now"
     },
     {
       icon: Mail,
       title: "Email Addresses",
-      details: ["hello@futureflowhr.com", "support@futureflowhr.com", "careers@futureflowhr.com"],
+      details: ["Info@optifusiontechnologies.com", "Hr@optifusiontechnologies.com", "Founder@optifusiontechnologies.com"],
       action: "Send Email"
     },
     {
