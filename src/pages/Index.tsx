@@ -40,23 +40,7 @@ const scrollRef = useRef(null);
     { icon: Star, label: "Client Rating", value: 4.9, suffix: "/5" },
   ];
 
-  const services = [
-    {
-      title: "Talent Acquisition",
-      description: "Find the perfect candidates for your organization with our advanced recruitment strategies.",
-      features: ["AI-powered matching", "Comprehensive screening", "Culture fit assessment"]
-    },
-    {
-      title: "HR Consulting",
-      description: "Transform your HR processes with expert guidance and innovative solutions.",
-      features: ["Process optimization", "Policy development", "Compliance assurance"]
-    },
-    {
-      title: "Workforce Analytics",
-      description: "Make data-driven decisions with our advanced workforce analytics platform.",
-      features: ["Performance insights", "Predictive analytics", "Custom reporting"]
-    }
-  ];
+
 
   const testimonials = [
     {
@@ -111,7 +95,10 @@ const scrollRef = useRef(null);
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="">
         <ParticleBackground />
+
+        </div>
         
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} flex flex-col justify-center items-center`}>
@@ -127,19 +114,19 @@ const scrollRef = useRef(null);
             <div>
        <button
   onClick={handleWhatsApp}
-  className="w-full group bg-gradient-to-r from-indigo-500 to-blue-500 
+  className="w-full bg-gradient-to-r from-indigo-500 to-blue-500 
              hover:from-indigo-600 hover:to-indigo-300 text-white font-bold 
-             px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl 
-             transition-all duration-300 transform hover:scale-105 
+             px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transform ease-in-out duration-3000
+               hover:scale-105 
              hover:shadow-lg hover:shadow-gray-600
-             flex items-center justify-center gap-2 ">
+             flex items-center justify-center gap-2 animate-slowbounce">
   Book Free Demo
   <ArrowRight className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" />
 </button>
 
            </div>
             <Link to="/watchdemo" className="w-full sm:w-auto">
-              <button className="w-full group btn-glass backdrop-blur-sm  text-gray-800 font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transition-all duration-300  hover:shadow-lg flex items-center justify-center gap-2  transform hover:scale-105 outline-none hover:shadow-gray-600 ">
+              <button className="w-full  btn-glass backdrop-blur-sm  text-gray-800 font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transition-all duration-300  hover:shadow-lg flex items-center justify-center gap-2   transform hover:scale-105 outline-none hover:shadow-gray-600 ">
                 <Play className="w-4 h-4 md:w-5 md:h-5" />
                 Watch Demo
               </button>
@@ -216,9 +203,9 @@ Our transparent and collaborative process keeps you informed at every stage. By 
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[250px]  md:w-[400px] scroll-snap-align-start"
+            className="flex-shrink-0 w-[250px]  md:w-[400px] scroll-snap-align-start "
           >
-            <Card className="glass hover-lift fade-in-up min-h-[350px] md:min-h-[250px]">
+            <Card className="glass hover-lift fade-in-up min-h-[350px] md:min-h-[250px] hover:drop-shadow-[0px_0px_4px_rgba(255,255,255,0.5)]">
               <CardContent className="p-8">
                 <p className="text-muted-foreground mb-6 italic">
                   "{testimonial.content}"

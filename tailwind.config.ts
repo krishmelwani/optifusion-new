@@ -74,8 +74,8 @@ export default {
 			},
 			keyframes: {
 				 "slowbounce": {
-					"0%, 100%": { transform: "translateY(0)" },
-					"50%": { transform: "translateY(-6px)" },
+					"0%, 100%": { transform: "translateY(-5px)" },
+					"50%": { transform: "translateY(10px)" },
 					},
 				'accordion-down': {
 					from: { height: '0' },
@@ -125,7 +125,7 @@ export default {
 				}
 			},
 			animation: {
-				"slowbounce": "slowbounce 50s ease-in-out infinite", // slower & smoother
+				"slowbounce": "slowbounce 2s ease-in-out infinite", // slower & smoother
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',

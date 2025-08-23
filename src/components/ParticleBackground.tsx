@@ -74,14 +74,14 @@ export const ParticleBackground = () => {
           0,
           particle.x,
           particle.y,
-          particle.size * 3
+          particle.size * 4
         );
         gradient.addColorStop(0, `hsla(${particle.hue}, 100%, 70%, ${particle.opacity})`);
         gradient.addColorStop(1, `hsla(${particle.hue}, 100%, 50%, 0)`);
 
         ctx.beginPath();
         ctx.fillStyle = gradient;
-        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
+        ctx.arc(particle.x, particle.y, particle.size * 10, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -135,7 +135,7 @@ export const ParticleBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none"
+      className="absolute inset-0 w-full h-full pointer-events-none backdrop:blur-md"
       style={{ zIndex: 1 }}
     />
   );
