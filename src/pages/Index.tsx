@@ -172,10 +172,23 @@ Our transparent and collaborative process keeps you informed at every stage. By 
         </div>
       </section>
 
+        <section className="py-10 px-6 sm:px-12 md:px-24">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+            Our Partners
+
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+             We're proud to partner with innovative businesses across various industries to deliver exceptional digital solutions.
+            </p>
+          </div>
+          </div>
       {/* Partners Preview */}
-        <Partners />
+        <Partners className="mt-5 p-5"/>
+          </section>
       {/* Testimonials Preview */}
-   <section className="py-24">
+   <section className="py-2">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">

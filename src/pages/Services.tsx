@@ -19,23 +19,30 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
     {
       icon: Users,
       title: "Talent Acquisition",
-      description: "End-to-end recruitment solutions powered by AI and human expertise",
+      description: "End-to-end recruitment solutions designed for businesses of all sizes.",
       features: [
-        "AI-powered candidate matching",
-        "Comprehensive screening process", 
-        "Cultural fit assessment",
-        "Reference and background checks",
-        "Onboarding support",
-        "90-day placement guarantee"
+        "Candidate delivery within 12–24 hours",
+        "Careful shortlisting based on role requirements",
+        "Comprehensive screening & background verification",
+        "Skill assessment tests with scored resumes",
+        "Cultural fit evaluation for long-term success",
+        "Priority shortlisting & featured listings",
+        "Dedicated hiring dashboard for easy tracking",
+        "Interview coordination & onboarding support",
+        "Dedicated WhatsApp & call support",
+        "Weekly reports on selected & rejected candidates",
       ],
       details: {
-        process: "Our talent acquisition process combines cutting-edge AI algorithms with human insight to find the perfect candidates for your organization.",
+        process: "Our talent acquisition team handles the entire hiring process, combining industry expertise with a focus on speed and quality. We align with your company’s needs and culture to deliver the right candidates efficiently.",
         benefits: [
-          "Reduce time-to-hire by 60%",
-          "Improve candidate quality by 40%",
-          "Lower recruitment costs by 35%",
-          "Increase retention rates by 25%"
-        ]
+          "Reduce time-to-hire by up to 60%",
+          "Improve candidate quality by 40% through detailed screening",
+          "Lower recruitment costs by 35% with efficient processes",
+          "Increase retention rates by 25% with culture-fit hiring",
+          "Unlimited job postings and access to unlimited candidates",
+          "Dedicated hiring dashboard to track progress",
+          "Industry-specific expertise across , Finance, Retail, Marketing ets",
+          "Priority shortlisting & featured listings for faster closures",        ]
       }
     }
   ];

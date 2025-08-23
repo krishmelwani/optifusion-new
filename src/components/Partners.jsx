@@ -27,11 +27,7 @@ const PartnersSection = () => {
   }, []);
 
   return (
-    <section className="partners  bg-muted/10" aria-labelledby="partners-heading">
-      <h2 id="partners-heading" className="visually-hidden">
-        Our Partners
-      </h2>
-
+    <>
       {/* Talent Partners */}
       <div className="partners-group" aria-labelledby="talent-partners">
         <div className="section-head">
@@ -99,7 +95,7 @@ const PartnersSection = () => {
          
         </ul>
       </div> */}
-    </section>
+   </>
   );
 };
 

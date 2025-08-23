@@ -1,18 +1,7 @@
 import { useEffect, useRef } from "react";
 
-interface Particle {
-  x: number;
-  y: number;
-  size: number;
-  speedX: number;
-  speedY: number;
-  opacity: number;
-  hue: number; // new: hue for gradient colors
-}
-
 export const ParticleBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>();
 
   useEffect(() => {
@@ -27,115 +16,60 @@ export const ParticleBackground = () => {
       canvas.height = window.innerHeight;
     };
 
-    const createParticles = () => {
-      const particles: Particle[] = [];
-      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 14000);
+    let time = 0;
 
-      for (let i = 0; i < numberOfParticles; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          size: Math.random() * 3 + 1,
-          speedX: (Math.random() - 0.5) * 0.7,
-          speedY: (Math.random() - 0.5) * 0.7,
-          opacity: Math.random() * 0.5 + 0.3,
-          hue: Math.random() * 60 + 200, // bluish–purple range
-        });
-      }
-
-      particlesRef.current = particles;
-    };
-
-    const updateParticles = () => {
-      particlesRef.current.forEach((particle) => {
-        particle.x += particle.speedX;
-        particle.y += particle.speedY;
-
-        // Wrap around edges
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.y > canvas.height) particle.y = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-
-        // Twinkle effect
-        particle.opacity += (Math.random() - 0.5) * 0.02;
-        particle.opacity = Math.max(0.2, Math.min(0.8, particle.opacity));
-      });
-    };
-
-    const drawParticles = () => {
+    const drawWaves = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw glowing particles
-      particlesRef.current.forEach((particle) => {
-        const gradient = ctx.createRadialGradient(
-          particle.x,
-          particle.y,
-          0,
-          particle.x,
-          particle.y,
-          particle.size * 4
-        );
-        gradient.addColorStop(0, `hsla(${particle.hue}, 100%, 70%, ${particle.opacity})`);
-        gradient.addColorStop(1, `hsla(${particle.hue}, 100%, 50%, 0)`);
+      const colors = [
+        "rgba(147, 51, 234, 0.3)", // violet
+        "rgba(59, 130, 246, 0.3)", // blue
+        "rgba(99, 102, 241, 0.2)", // indigo
+      ];
 
+      colors.forEach((color, index) => {
         ctx.beginPath();
-        ctx.fillStyle = gradient;
-        ctx.arc(particle.x, particle.y, particle.size * 10, 0, Math.PI * 2);
+        ctx.moveTo(0, canvas.height / 2);
+
+        for (let x = 0; x <= canvas.width; x++) {
+          const y =
+            canvas.height / 1.1 +
+            Math.sin(x * 0.01 + time / (2000 + index * 500)) *
+              (40 + index * 20); // wave height
+          ctx.lineTo(x, y);
+        }
+
+        ctx.lineTo(canvas.width, canvas.height);
+        ctx.lineTo(0, canvas.height);
+        ctx.closePath();
+
+        ctx.fillStyle = color;
         ctx.fill();
       });
 
-      // Draw connections between nearby particles
-      particlesRef.current.forEach((particle, i) => {
-        for (let j = i + 1; j < particlesRef.current.length; j++) {
-          const particle2 = particlesRef.current[j];
-          const distance = Math.sqrt(
-            Math.pow(particle.x - particle2.x, 2) + Math.pow(particle.y - particle2.y, 2)
-          );
-
-          if (distance < 130) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(particle2.x, particle2.y);
-            ctx.strokeStyle = `hsla(${(particle.hue + particle2.hue) / 2}, 100%, 70%, ${
-              0.15 * (1 - distance / 130)
-            })`;
-            ctx.lineWidth = 0.7;
-            ctx.stroke();
-          }
-        }
-      });
+      time += 16; // smooth animation
     };
 
     const animate = () => {
-      updateParticles();
-      drawParticles();
+      drawWaves();
       animationRef.current = requestAnimationFrame(animate);
     };
 
-    // Init
     resizeCanvas();
-    createParticles();
     animate();
 
-    // Handle resize
-    const handleResize = () => {
-      resizeCanvas();
-      createParticles();
-    };
-
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", resizeCanvas);
 
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none backdrop:blur-md"
+      className="absolute inset-0 w-full h-full pointer-events-none"
       style={{ zIndex: 1 }}
     />
   );
