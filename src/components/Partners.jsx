@@ -27,7 +27,7 @@ const PartnersSection = () => {
   }, []);
 
   return (
-    <section className="partners  bg-muted/20" aria-labelledby="partners-heading">
+    <section className="partners  bg-muted/10" aria-labelledby="partners-heading">
       <h2 id="partners-heading" className="visually-hidden">
         Our Partners
       </h2>

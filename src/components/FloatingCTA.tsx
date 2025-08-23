@@ -23,7 +23,7 @@ export const FloatingCTA = () => {
     window.open("https://wa.me/919928610677?text=Hi!%20interested%20in%20exploring%20your%20talent%20acquisition%20services.%20I%20would%20like%20to%20book%20a%20free%20demo%20and%20see%20a%20few%20candidate%20profiles.%20Can%20we%20schedule%20it%3F", "_blank")
   }
   return (
-    <div className="fixed bottom-6 right-6 z-40">
+    <div className="fixed bottom-6 right-6 z-40 animate-bounce">
       {isExpanded ? (
         <div className="bg-card glass rounded-2xl p-6 shadow-2xl animate-scale-in max-w-sm">
           <div className="flex justify-between items-start mb-4">
@@ -42,7 +42,7 @@ export const FloatingCTA = () => {
           </p>
           <div className="space-y-3">
             <Button  onClick={handleWhatsApp} className="w-full btn-primary">
-              <Phone className="w-4 h-4 mr-2" />
+              <Phone className="w-8 h-8 " />
               Schedule Call
             </Button>
             {/* <Button variant="outline" className="w-full btn-glass">

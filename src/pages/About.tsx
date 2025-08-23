@@ -33,24 +33,24 @@ const About = () => {
 
   const timeline = [
     {
-      year: "2024",
-      title: "The Beginning",
-      description: "We launched our journey with a simple goal: to help startups and small businesses find the right talent while also guiding them with practical HR solutions."
+     year: "2024",
+      title: "Establishing Foundations",
+      description: "Optifusion Technologies was founded with a clear vision: to deliver dependable, efficient, and scalable recruitment solutions. From the very beginning, our approach emphasized structured processes, measurable outcomes, and building lasting trust with every client. These principles created a strong foundation for sustainable growth and strategic expansion."
     },
     {
       year: "2024",
       title: "First Placements",
-      description: "Within months, we successfully placed our first candidates and built trust with early clients who needed reliable hiring support."
+      description: "During our first year, we successfully completed critical hiring mandates, establishing credibility and demonstrating our ability to consistently meet client expectations. Each accomplishment reinforced our reputation as a reliable partner in talent acquisition."
     },
     {
       year: "2025",
-      title: "Building Partnerships",
-      description: "This year, we partnered with growing businesses across different industries, streamlining their hiring processes and creating better HR practices."
+      title: "Broadening Collaborations",
+      description: "With increasing demand, we expanded our reach across diverse industries, partnering with organizations of varying scales and sectors. These engagements provided valuable insights into unique hiring requirements, allowing us to refine our solutions, strengthen client relationships, and enhance overall service delivery."
     },
     {
       year: "2025",
-      title: "Expanding Services",
-      description: "Beyond talent acquisition, we started providing end-to-end HR consulting, helping companies with policies, compliance, and workforce management."
+      title: "Ongoing Growth and Recognition",
+      description: "As 2025 progresses, Optifusion Technologies continues to solidify its market presence. Returning clients, ongoing projects, and positive endorsements highlight our consistent performance, positioning the company as a trusted and respected name in recruitment services."
     }
   ];
 
@@ -161,19 +161,15 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="fade-in-left">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Optifusion Technologies HR was born from a simple observation: the traditional approach to HR consulting 
-                  wasn't keeping pace with the rapidly evolving business landscape. Companies needed smarter, 
-                  faster, and more efficient ways to find and retain top talent.
+                  Optifusion Technologies HR was established in 2024 with a straightforward goal: to bring a more effective, reliable approach to human resources consulting. We recognized that businesses today require practical, results-driven HR solutions to attract and retain top talent in a rapidly changing environment.
+                  With a team built on proven HR expertise, we are committed to delivering consistent value to every client. Our strength lies in understanding the specific needs of our partners and providing tailored support throughout the talent acquisition process.
+
                 </p>
                 <p className="text-lg text-muted-foreground mb-6">
-                  we have combined experience in HR and technology set out to 
-                  create a consultancy that would leverage cutting-edge AI and data analytics while maintaining 
-                  the personal touch that makes all the difference in human resources.
+                 Today, we are proud to work with over 15 organizations across a variety of sectors. Since our inception, we have facilitated more than 500 + successful placements and achieved a client satisfaction rate of 93%. Our focus remains on delivering excellence and building lasting partnerships.
+
                 </p>
-                <p className="text-lg text-muted-foreground">
-                  Today, we're proud to serve 50+ companies across multiple industries, with a track record 
-                  of 500+ successful placements and a 95% client satisfaction rate. But we're just getting started.
-                </p>
+             
               </div>
               
               <div className="fade-in-right">
@@ -181,7 +177,7 @@ const About = () => {
                   <CardContent className="p-8">
                     <div className="grid grid-cols-2 gap-6 text-center">
                       <div>
-                        <div className="text-3xl font-bold  text-violet-600 mb-2"> 20<AnimatedCounter end={22} /></div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> 20<AnimatedCounter end={24} /></div>
                         <div className="text-sm text-muted-foreground">Founded</div>
                       </div>
                       <div>
@@ -189,12 +185,12 @@ const About = () => {
                         <div className="text-sm text-muted-foreground">Placements</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={50} suffix={"+"} /></div>
-                        <div className="text-sm text-muted-foreground">Companies</div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={15} suffix={"+"} /></div>
+                        <div className="text-sm text-muted-foreground">Companies Served</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={95} suffix={"%"} /></div>
-                        <div className="text-sm text-muted-foreground">Success Rate</div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={93} suffix={"%"} /></div>
+                        <div className="text-sm text-muted-foreground">Client Satisfaction Rate</div>
                       </div>
                     </div>
                   </CardContent>

@@ -7,7 +7,7 @@ interface Particle {
   speedX: number;
   speedY: number;
   opacity: number;
-  color: string;
+  hue: number; // new: hue for gradient colors
 }
 
 export const ParticleBackground = () => {
@@ -29,17 +29,17 @@ export const ParticleBackground = () => {
 
     const createParticles = () => {
       const particles: Particle[] = [];
-      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 15000);
+      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 14000);
 
       for (let i = 0; i < numberOfParticles; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           size: Math.random() * 3 + 1,
-          speedX: (Math.random() - 0.5) * 0.5,
-          speedY: (Math.random() - 0.5) * 0.5,
-          opacity: Math.random() * 0.5 + 0.2,
-          color: Math.random() > 0.5 ? "rgba(147, 51, 234, " : "rgba(59, 130, 246, " // primary and secondary colors
+          speedX: (Math.random() - 0.5) * 0.7,
+          speedY: (Math.random() - 0.5) * 0.7,
+          opacity: Math.random() * 0.5 + 0.3,
+          hue: Math.random() * 60 + 200, // bluish–purple range
         });
       }
 
@@ -57,20 +57,31 @@ export const ParticleBackground = () => {
         if (particle.y > canvas.height) particle.y = 0;
         if (particle.y < 0) particle.y = canvas.height;
 
-        // Slightly vary opacity for twinkling effect
+        // Twinkle effect
         particle.opacity += (Math.random() - 0.5) * 0.02;
-        particle.opacity = Math.max(0.1, Math.min(0.7, particle.opacity));
+        particle.opacity = Math.max(0.2, Math.min(0.8, particle.opacity));
       });
     };
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw particles
+      // Draw glowing particles
       particlesRef.current.forEach((particle) => {
+        const gradient = ctx.createRadialGradient(
+          particle.x,
+          particle.y,
+          0,
+          particle.x,
+          particle.y,
+          particle.size * 3
+        );
+        gradient.addColorStop(0, `hsla(${particle.hue}, 100%, 70%, ${particle.opacity})`);
+        gradient.addColorStop(1, `hsla(${particle.hue}, 100%, 50%, 0)`);
+
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color + particle.opacity + ")";
+        ctx.fillStyle = gradient;
+        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -82,12 +93,14 @@ export const ParticleBackground = () => {
             Math.pow(particle.x - particle2.x, 2) + Math.pow(particle.y - particle2.y, 2)
           );
 
-          if (distance < 120) {
+          if (distance < 130) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(particle2.x, particle2.y);
-            ctx.strokeStyle = `rgba(147, 51, 234, ${0.1 * (1 - distance / 120)})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `hsla(${(particle.hue + particle2.hue) / 2}, 100%, 70%, ${
+              0.15 * (1 - distance / 130)
+            })`;
+            ctx.lineWidth = 0.7;
             ctx.stroke();
           }
         }
@@ -100,7 +113,7 @@ export const ParticleBackground = () => {
       animationRef.current = requestAnimationFrame(animate);
     };
 
-    // Initialize
+    // Init
     resizeCanvas();
     createParticles();
     animate();
@@ -114,9 +127,7 @@ export const ParticleBackground = () => {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
