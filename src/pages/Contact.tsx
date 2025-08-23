@@ -156,9 +156,29 @@ const Contact = () => {
                       </p>
                     ))}
                   </div>
-                  <Button variant="outline" size="sm" className="btn-glass">
+                  <a
+                    href={
+                      info.action === "Call Now"
+                        ? "tel:+919928610677"
+                        : info.action === "Get Directions"
+                        ? "https://maps.app.goo.gl/rw6Q6fgnP6zdXNpaA"
+                        : info.action === "Send Email"
+                        ? "mailto:Info@optifusiontechnologies.com?subject=Inquiry&body=Hello, I want to know more about your services."
+                        : info.action === "Schedule Call"
+                        ? "https://wa.me/919928610677?text=Hi!%20interested%20in%20exploring%20your%20talent%20acquisition%20services.%20I%20would%20like%20to%20book%20a%20free%20demo%20and%20see%20a%20few%20candidate%20profiles.%20Can%20we%20schedule%20it%3F"
+                        : "#"
+                    }
+                    target={
+                      info.action === "Get Directions" || info.action === "Schedule Call"
+                        ? "_blank" // external web links → open new tab
+                        : undefined // tel: and mailto: → open system app
+                    }
+                    rel="noopener noreferrer"
+                  >
+                    <Button   variant="outline" size="sm" className="btn-glass">
                     {info.action}
                   </Button>
+                  </a>
                 </CardContent>
               </Card>
             ))}

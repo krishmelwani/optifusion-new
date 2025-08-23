@@ -84,13 +84,17 @@ export default function PricingCard() {
         </div>
 
         {/* Features */}
-        <ul className="space-y-3 text-left w-full flex flex-col items-center ">
+        <ul className="items-center ">
+          <div className="space-y-3 text-left w-full flex flex-col">
+
+          
           {plan.features.map((feature, idx) => (
             <li key={idx} className="flex items-center gap-2">
               <Check className="w-5 h-5 text-purple-400" />
               <span>{feature}</span>
             </li>
           ))}
+          </div>
         </ul>
 
         {/* CTA */}

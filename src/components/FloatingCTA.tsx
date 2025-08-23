@@ -45,9 +45,9 @@ export const FloatingCTA = () => {
               <Phone className="w-4 h-4 mr-2" />
               Schedule Call
             </Button>
-            <Button variant="outline" className="w-full btn-glass">
+            {/* <Button variant="outline" className="w-full btn-glass">
               Send Message
-            </Button>
+            </Button> */}
           </div>
         </div>
       ) : (

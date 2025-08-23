@@ -45,28 +45,33 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
 
   const faqs = [
     {
-      question: "How quickly can you fill a position?",
-      answer: "Our average time-to-fill is 14-21 days for most positions, significantly faster than the industry average of 36 days. For specialized or executive roles, it may take 4-6 weeks."
+      question: "What makes Optifusion Technologies different from other recruitment agencies?",
+      answer: "We combine unlimited job postings, a dedicated hiring dashboard, and end-to-end support—from screening and skill assessments to interview and onboarding guidance—to ensure precise, efficient, and high-quality hiring."
+
     },
     {
-      question: "What industries do you specialize in?",
-      answer: "We work across multiple industries including technology, healthcare, finance, retail, manufacturing, and call centers. Our team has specialized expertise in each sector."
+      question: "How does your dashboard help streamline recruitment?",
+      answer: "Our dashboard provides real-time updates on applications, shortlisted candidates, interview schedules, and hiring progress, giving complete visibility and control over your recruitment process."
     },
     {
-      question: "Do you offer placement guarantees?",
-      answer: "Yes! We offer placement guarantees ranging from 30-90 days depending on your plan. If a candidate doesn't work out within the guarantee period, we'll replace them at no additional cost."
+      question: "How quickly can I access high-quality candidates?",
+      answer: "We deliver carefully screened and scored candidate profiles within 12–24 hours, ensuring fast and efficient hiring without compromising on quality."
     },
     {
-      question: "How does your AI-powered matching work?",
-      answer: "Our AI analyzes hundreds of data points including skills, experience, cultural preferences, and success patterns to match candidates with positions. This results in 40% better placement success rates."
+      question: "Do you ensure candidates are a cultural fit for my company?",
+      answer: "Yes, every candidate is evaluated not only for skills but also for alignment with your company’s culture, ensuring long-term success and engagement."
     },
     {
-      question: "Can you help with remote hiring?",
-      answer: "Absolutely! We have extensive experience with remote and hybrid hiring across global markets. Our platform supports virtual interviews, remote onboarding, and distributed team integration."
+      question: "Are skill assessments included with candidate profiles?",
+      answer: "Absolutely. Each candidate comes with skill assessment results and scored resumes to help you make informed hiring decisions quickly."
     },
     {
-      question: "What's included in your HR consulting services?",
-      answer: "Our consulting includes strategy development, policy creation, compliance auditing, organizational design, performance management setup, and employee engagement programs. Everything is customized to your needs."
+      question: "Can I try your services before subscribing?",
+      answer: "Yes, we offer a free demo that lets you experience our recruitment process, evaluate candidate quality, and explore the dashboard before committing."
+    },
+    {
+      question: "How can I get support during the recruitment process?",
+      answer:"Our dedicated team is available via email, call, or WhatsApp to guide you at every step, ensuring smooth communication and timely support."
     }
   ];
 
