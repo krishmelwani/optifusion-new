@@ -47,7 +47,7 @@ export const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 pr-20">
+          <div className="hidden lg:flex items-center space-x-8 md:pr-16">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -104,7 +104,7 @@ export const Navigation = () => {
                 {/* <Button variant="outline" className="btn-glass">
                   Login
                 </Button> */}
-                {/* <Button className="btn-primary">Get Started</Button> */}
+                <Button className="btn-primary">Get Started</Button>
               </div>
             </div>
           </div>

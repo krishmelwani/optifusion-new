@@ -120,11 +120,11 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
       {/* Hero Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text fade-in-up">
+          <div className="max-w-4xl mx-auto text-center" >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text" data-aos="fade-up">
               Services & Pricing
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 " style={{ animationDelay: '0.2s' }} data-aos="fade-up">
               Comprehensive HR solutions designed to transform your workforce 
               and accelerate your business growth.
             </p>
@@ -169,7 +169,7 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
                 className="mt-8 fade-in-up"
               >
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
-                  <Card className="glass hover-lift" data-aos="fade-right">
+                  <Card className="glass hover-lift" data-aos="fade-down">
                     <CardContent className="p-8">
                       <service.icon className="w-16 h-16 text-primary mb-6" />
                       <h3 className="text-3xl font-bold mb-4 gradient-text">{service.title}</h3>
@@ -191,7 +191,7 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
                     </CardContent>
                   </Card>
 
-                  <Card className="glass hover-lift" data-aos="fade-left">
+                  <Card className="glass hover-lift" data-aos="fade-up">
                     <CardContent className="p-8">
                       <h4 className="text-2xl font-bold mb-6 gradient-text">How It Works</h4>
                       <p className="text-muted-foreground mb-6">{service.details.process}</p>
@@ -226,19 +226,19 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
 
       {/* Process Flow */}
       <section className="py-24 bg-muted/20">
-        <div className="container mx-auto px-6" data-aos="fade-up">
+        <div className="container mx-auto px-6" >
           <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-aos="fade-up">
               Our Process
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-aos="fade-up">
               A proven methodology that delivers consistent results
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <Card key={index} className="glass hover-lift text-center fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="glass hover-lift text-center fade-in-up" data-aos="fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                     <step.icon className="w-8 h-8 text-white" />
@@ -257,10 +257,10 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-aos="zoom-in">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-aos="zoom-in">
               Get answers to common questions about our services
             </p>
           </div>
@@ -273,7 +273,7 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
                   value={`item-${index}`}
                   className="glass rounded-lg px-6 fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
-                >
+                data-aos="fade-up">
                   <AccordionTrigger className="text-left hover:no-underline">
                     <span className="text-lg font-semibold">{faq.question}</span>
                   </AccordionTrigger>

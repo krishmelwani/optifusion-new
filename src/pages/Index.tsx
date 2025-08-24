@@ -149,12 +149,11 @@ const scrollRef = useRef(null);
       {/* Why Choose Us */}
       <section className="py-24 relative">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 fade-in-up " data-aos="fade-down"
-    data-aos-delay="300">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+          <div className="text-center mb-16" >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-aos='zoom-in' >
               Why Choose  Optifusion Technologies?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-aos='slide-right'>
               hiring the right talent is vital to your success. We take the time to understand your company’s culture, values, and goals to connect you with candidates who are skilled and align with your unique work environment. This approach helps build engaged, cohesive teams that support long-term growth.
 Our transparent and collaborative process keeps you informed at every stage. By prioritizing quality and fit over quantity, we help you make confident hiring decisions tailored to your evolving needs. Partner with Optifusion for personalized talent acquisition solutions that keep your business competitive in today’s fast-changing market
             </p>
@@ -162,7 +161,7 @@ Our transparent and collaborative process keeps you informed at every stage. By 
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((item, index) => (
-              <Card key={index} className="glass hover-lift " data-aos ="flip-up" style={{ animationDelay: `${index * 0.1}s` }} >
+              <Card key={index} className="glass hover-lift " data-aos="flip-up" style={{ animationDelay: `${index * 0.1}s` }} >
                 <CardContent className="p-8 text-center">
                   <item.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
                   <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-indigo-500">
@@ -178,13 +177,13 @@ Our transparent and collaborative process keeps you informed at every stage. By 
       </section>
 
         <section className="py-10 px-6 sm:px-12 md:px-24">
-          <div className="container mx-auto px-6" data-aos='fade-left' data-aos-delay="100">
+          <div className="container mx-auto px-6" >
             <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-aos='fade-down'  >
             Our Partners
 
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-aos='fade-down' >
              We're proud to partner with innovative businesses across various industries to deliver exceptional digital solutions.
             </p>
           </div>
@@ -195,11 +194,11 @@ Our transparent and collaborative process keeps you informed at every stage. By 
       {/* Testimonials Preview */}
    <section className="py-2">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 " data-aos="zoom-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+          <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-aos="fade-right">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-aos="fade-right">
               Don't just take our word for it - hear from the companies we've helped transform
             </p>
           </div>
@@ -222,8 +221,8 @@ Our transparent and collaborative process keeps you informed at every stage. By 
           <div
             key={index}
             className="flex-shrink-0 w-[250px]  md:w-[400px] scroll-snap-align-start "
-          >
-            <Card className="glass hover-lift fade-in-up min-h-[350px] md:min-h-[250px] hover:drop-shadow-[0px_0px_4px_rgba(255,255,255,0.5)]">
+          data-aos='fade-right'>
+            <Card className="glass hover-lift fade-in-up min-h-[350px] md:min-h-[250px] hover:drop-shadow-[0px_0px_4px_rgba(255,255,255,0.5)]" >
               <CardContent className="p-8">
                 <p className="text-muted-foreground mb-6 italic">
                   "{testimonial.content}"
@@ -254,7 +253,7 @@ Our transparent and collaborative process keeps you informed at every stage. By 
       {/* Newsletter Signup */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-6">
-          <Card className="glass max-w-4xl mx-auto fade-in-up">
+          <Card className="glass max-w-4xl mx-auto  " data-aos="fade-up">
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
                 Stay Updated with HR Trends

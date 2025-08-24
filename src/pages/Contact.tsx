@@ -191,7 +191,7 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <Card className="glass hover-lift" data-aos="fade-left">
+            <Card className="glass hover-lift" data-aos="fade-down">
               <CardHeader>
                 <CardTitle className="text-3xl gradient-text flex items-center">
                   <MessageSquare className="w-8 h-8 mr-3" />

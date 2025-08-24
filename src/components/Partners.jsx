@@ -30,19 +30,19 @@ const PartnersSection = () => {
   return (
     <>
       {/* Talent Partners */}
-      <div className="partners-group" aria-labelledby="talent-partners" data-aos="fade-left">
+      <div className="partners-group" aria-labelledby="talent-partners">
         <div className="section-head">
           <span className="eyebrow">Partners</span>
           <h3 id="talent-partners">Talent Partners</h3>
         </div>
         <ul className="logo-grid" role="list">
-          <li className="logo-item fade-up hover-lift">
+          <li className="logo-item fade-up ">
             <img
               src={talento}
               alt="Talento"
             />
           </li>
-          <li className="logo-item fade-up hover-lift">
+          <li className="logo-item fade-up">
             <img
               src={internshipStudio}
               alt="Internship Studios"
@@ -53,25 +53,25 @@ const PartnersSection = () => {
       </div>
 
       {/* Training & Upskilling Partners */}
-      <div className="partners-group" aria-labelledby="training-partners" data-aos="fade-right">
+      <div className="partners-group" aria-labelledby="training-partners">
         <div className="section-head">
           <span className="eyebrow">Partners</span>
           <h3 id="training-partners">Training & Upskilling Partners</h3>
         </div>
         <ul className="logo-grid " role="list">
-          <li className="logo-item fade-up hover-lift">
+          <li className="logo-item fade-up ">
             <img
               src={vertex}
               alt="SkillVertex"
             />
           </li>
-          <li className="logo-item fade-up hover-lift">
+          <li className="logo-item fade-up">
             <img
               src={imarticus}
               alt="imarticus"
             />
           </li>
-          <li className="logo-item fade-up hover-lift">
+          <li className="logo-item fade-up">
             <img
               src={scalar}
               alt="Scalar"
@@ -81,7 +81,7 @@ const PartnersSection = () => {
       </div>
 
       {/* HR Tech Partners */}
-      <div className="partners-group" aria-labelledby="hr-tech-partners" data-aos="fade-left">
+      <div className="partners-group" aria-labelledby="hr-tech-partners">
         <div className="section-head">
           <span className="eyebrow">Partners</span>
           <h3 id="hr-tech-partners">Legal & Compliance Advisory Partners</h3>
