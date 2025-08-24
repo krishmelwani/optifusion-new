@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import ScrollToHashElement from "./components/ScrollToHashElement";
 const queryClient = new QueryClient();
 
 const App = () =>{
@@ -45,6 +46,7 @@ const App = () =>{
       <Sonner />
       <BrowserRouter>
        <ScrollToTop />
+        <ScrollToHashElement />
         <div className="min-h-screen bg-background">
           <Navigation />
           <main>

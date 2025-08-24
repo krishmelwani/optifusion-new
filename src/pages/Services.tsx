@@ -254,9 +254,9 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24">
+      <section className="py-24 " >
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16 fade-in-up" id="faq-section">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-aos="zoom-in">
               Frequently Asked Questions
             </h2>

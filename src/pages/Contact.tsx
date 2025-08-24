@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -106,6 +107,11 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
+
+   const handleWhatsApp = ()=>{
+    window.open("https://wa.me/919928610677", "_blank")
+  }
+  
   return (
     <div className="pt-20">
       <ScrollAnimations />
@@ -414,10 +420,12 @@ const Contact = () => {
                 for personalized assistance with your HR needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="outline" className="btn-glass text-lg px-8 py-4">
+                <Link to="/services#faq-section">
+                <Button  size="lg" variant="outline" className="btn-glass text-lg px-8 py-4">
                   View FAQ
                 </Button>
-                <Button size="lg" className="btn-primary text-lg px-8 py-4">
+                </Link>
+                <Button onClick={handleWhatsApp} size="lg" className="btn-primary text-lg px-8 py-4">
                   Contact Support
                 </Button>
               </div>

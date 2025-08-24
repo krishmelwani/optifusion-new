@@ -30,6 +30,13 @@ export const Navigation = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
+
+
+   const handleWhatsApp = ()=>{
+    window.open("https://wa.me/919928610677?text=Hi!%20interested%20in%20exploring%20your%20talent%20acquisition%20services.%20I%20would%20like%20to%20book%20a%20free%20demo%20and%20see%20a%20few%20candidate%20profiles.%20Can%20we%20schedule%20it%3F", "_blank")
+  }
+
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -104,7 +111,9 @@ export const Navigation = () => {
                 {/* <Button variant="outline" className="btn-glass">
                   Login
                 </Button> */}
-                <Button className="btn-primary">Get Started</Button>
+                
+                <Button onClick={handleWhatsApp} className="btn-primary">Get Started</Button>
+              
               </div>
             </div>
           </div>
