@@ -23,7 +23,7 @@ const queryClient = new QueryClient();
 const App = () =>{
   useEffect(() => {
   AOS.init({
-    duration: 600,
+    duration: 850,
     once: false,   // run every scroll
   });
 
