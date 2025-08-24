@@ -5,7 +5,8 @@ import  talento from '/public/companyLogo/Talento.png'
 import  vertex from '/public/companyLogo/skill vertex.jpg'
 import  scalar from '/public/companyLogo//scalar.jpg'
 import  imarticus from '/public/companyLogo/imarticus.jpg'
-
+import vakilSearch from '/public/companyLogo/vakil search.jpg'
+import simpliance from '/public/companyLogo/simpliance.jpg'
 
 const PartnersSection = () => {
   useEffect(() => {
@@ -29,7 +30,7 @@ const PartnersSection = () => {
   return (
     <>
       {/* Talent Partners */}
-      <div className="partners-group" aria-labelledby="talent-partners">
+      <div className="partners-group" aria-labelledby="talent-partners" data-aos="fade-left">
         <div className="section-head">
           <span className="eyebrow">Partners</span>
           <h3 id="talent-partners">Talent Partners</h3>
@@ -52,7 +53,7 @@ const PartnersSection = () => {
       </div>
 
       {/* Training & Upskilling Partners */}
-      <div className="partners-group" aria-labelledby="training-partners">
+      <div className="partners-group" aria-labelledby="training-partners" data-aos="fade-right">
         <div className="section-head">
           <span className="eyebrow">Partners</span>
           <h3 id="training-partners">Training & Upskilling Partners</h3>
@@ -80,21 +81,27 @@ const PartnersSection = () => {
       </div>
 
       {/* HR Tech Partners */}
-      {/* <div className="partners-group" aria-labelledby="hr-tech-partners">
+      <div className="partners-group" aria-labelledby="hr-tech-partners" data-aos="fade-left">
         <div className="section-head">
           <span className="eyebrow">Partners</span>
-          <h3 id="hr-tech-partners">HR Tech Partners</h3>
+          <h3 id="hr-tech-partners">Legal & Compliance Advisory Partners</h3>
         </div>
         <ul className="logo-grid" role="list">
           <li className="logo-item fade-up">
             <img
-              src="https://dummyimage.com/200x80/ff9955/fff.png&text=HRMS+Cloud"
-              alt="HRMS Cloud"
+              src={vakilSearch}
+              alt="vakil search"
+            />
+             </li>
+          <li className="logo-item fade-up">
+            <img
+              src={simpliance}
+              alt="simpliance"
             />
           </li>
          
         </ul>
-      </div> */}
+      </div>
    </>
   );
 };

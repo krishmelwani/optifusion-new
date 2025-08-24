@@ -113,7 +113,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text fade-in-up">
               Get In Touch
             </h1>
@@ -132,7 +132,7 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16 " data-aos="fade-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
               Contact Information
             </h2>
@@ -143,7 +143,7 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="glass hover-lift text-center fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="glass hover-lift text-center" style={{ animationDelay: `${index * 0.1}s` }} data-aos="fade-up">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                     <info.icon className="w-8 h-8 text-white" />
@@ -191,7 +191,7 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <Card className="glass hover-lift fade-in-left">
+            <Card className="glass hover-lift" data-aos="fade-left">
               <CardHeader>
                 <CardTitle className="text-3xl gradient-text flex items-center">
                   <MessageSquare className="w-8 h-8 mr-3" />
@@ -353,7 +353,7 @@ const Contact = () => {
               </Card> */}
 
               {/* Quick Actions */}
-              <Card className="glass hover-lift">
+              <Card className="glass hover-lift" data-aos="fade-up">
                 <CardHeader>
                   <CardTitle className="text-2xl gradient-text flex items-center">
                     <Calendar className="w-6 h-6 mr-3" />
@@ -378,7 +378,7 @@ const Contact = () => {
               </Card>
 
               {/* Response Time */}
-              <Card className="glass hover-lift">
+              <Card className="glass hover-lift" data-aos="fade-up">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">

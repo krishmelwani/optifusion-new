@@ -128,17 +128,17 @@ const About = () => {
   }, []);
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 ">
       <ScrollAnimations />
       
       {/* Hero Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden min-h-[50vh]">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text fade-in-up">
+          <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text " >
               About  Optifusion Technologies
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 " style={{ animationDelay: '0.2s' }} data-aos="zoom-in">
               Founded in 2022, we're transforming the HR landscape with innovative solutions 
               that bridge the gap between exceptional talent and forward-thinking companies.
             </p>
@@ -159,7 +159,7 @@ const About = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="fade-in-left">
+              <div className="" data-aos="slide-right">
                 <p className="text-lg text-muted-foreground mb-6">
                   Optifusion Technologies HR was established in 2024 with a straightforward goal: to bring a more effective, reliable approach to human resources consulting. We recognized that businesses today require practical, results-driven HR solutions to attract and retain top talent in a rapidly changing environment.
                   With a team built on proven HR expertise, we are committed to delivering consistent value to every client. Our strength lies in understanding the specific needs of our partners and providing tailored support throughout the talent acquisition process.
@@ -211,7 +211,7 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="glass hover-lift fade-in-up">
+            <Card className="glass hover-lift " data-aos="fade-up">
               <CardContent className="p-8 text-center">
                 <Target className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-2xl font-bold mb-4 gradient-text">Our Mission</h3>
@@ -222,7 +222,7 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass hover-lift fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <Card className="glass hover-lift " style={{ animationDelay: '0.1s' }} data-aos="fade-up">
               <CardContent className="p-8 text-center">
                 <Eye className="w-12 h-12 mx-auto mb-4 text-secondary" />
                 <h3 className="text-2xl font-bold mb-4 gradient-text">Our Vision</h3>
@@ -233,7 +233,7 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass hover-lift fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <Card className="glass hover-lift " style={{ animationDelay: '0.2s' }} data-aos="fade-up">
               <CardContent className="p-8 text-center">
                 <Heart className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-2xl font-bold mb-4 gradient-text">Our Values</h3>
@@ -247,7 +247,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="glass hover-lift fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="glass hover-lift " style={{ animationDelay: `${index * 0.1}s` }} data-aos="fade-down">
                 <CardContent className="p-6">
                   <value.icon className="w-8 h-8 mb-4 text-primary" />
                   <h4 className="text-xl font-semibold mb-3 gradient-text">{value.title}</h4>
@@ -262,7 +262,7 @@ const About = () => {
       {/* Timeline */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16 " data-aos="fade-right">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
               Our Journey
             </h2>
@@ -280,7 +280,7 @@ const About = () => {
                   <div className="relative z-10 w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-8">
                     <Calendar className="w-8 h-8 text-white" />
                   </div>
-                  <Card className="flex-1 glass hover-lift">
+                  <Card className="flex-1 glass hover-lift" data-aos="fade-up">
                     <CardContent className="p-6">
                       <div className="text-2xl font-bold gradient-text mb-2">{item.year}</div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
@@ -308,7 +308,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <Card key={index} className="glass hover-lift hover-glow fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="glass hover-lift hover-glow " data-aos="fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-8 text-center">
                   <div className="text-4xl mb-4">{industry.icon}</div>
                   <h3 className="text-xl font-bold mb-3 gradient-text">{industry.name}</h3>
@@ -337,9 +337,9 @@ const About = () => {
               <Card 
                 key={index} 
                 className={`glass hover-lift transition-all duration-500
-                  fade-in-up`}
+                  `}
                 style={{ animationDelay: `${index * 0.1}s` }}
-              >
+             data-aos="fade-up" >
                 <CardContent className="p-6 text-center">
                   <div className="text-2xl font-bold gradient-text mb-3">{step.step}</div>
                   <h3 className="text-lg font-semibold mb-3">{step.title}</h3>

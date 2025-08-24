@@ -85,7 +85,7 @@ const Team = () => {
       {/* Hero Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text fade-in-up">
               Meet Our Team
             </h1>
@@ -117,11 +117,11 @@ const Team = () => {
             {teamMembers.map((member, index) => (
               <Card 
                 key={index} 
-                className="glass hover-lift group overflow-hidden fade-in-up"
+                className="glass hover-lift group overflow-hidden "
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onMouseEnter={() => setHoveredMember(index)}
                 onMouseLeave={() => setHoveredMember(null)}
-              >
+               data-aos="fade-up">
                 <CardContent className="p-0">
                   {/* Image Section */}
                   <div className="relative overflow-hidden">
@@ -198,7 +198,7 @@ const Team = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {companyValues.map((value, index) => (
-              <Card key={index} className="glass hover-lift fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="glass hover-lift" style={{ animationDelay: `${index * 0.1}s` }} data-aos="fade-up">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4 gradient-text">{value.title}</h3>
                   <p className="text-muted-foreground">{value.description}</p>
@@ -236,7 +236,7 @@ const Team = () => {
 
       {/* Statistics */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6" data-aos="fade-up">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="fade-in-up">
               <div className="text-4xl font-bold gradient-text mb-2">6+</div>
