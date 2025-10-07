@@ -98,16 +98,19 @@ const handleSubmit = async (e) => {
   setIsSubmitting(true);
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-       mode: "cors",
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_BACKEND_URL || '/backend'}/proxy`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      }
+    );
 
     const result = await response.json();
-    console.log(result)
-    if (result.status === 'success') {
+    console.log(result);
+
+    if (result.status === 'success' || response.ok) {
       alert('✅ Message sent successfully!');
       setFormData({
         name: '',
@@ -123,7 +126,7 @@ const handleSubmit = async (e) => {
       alert('⚠️ Something went wrong. Please try again.');
     }
   } catch (error) {
-    console.error(error);
+    console.error('Error submitting form:', error);
     alert('❌ Failed to send message. Please try again later.');
   } finally {
     setIsSubmitting(false);
