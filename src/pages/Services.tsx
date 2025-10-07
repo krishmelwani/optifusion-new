@@ -21,28 +21,29 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
       title: "Talent Acquisition",
       description: "End-to-end recruitment solutions designed for businesses of all sizes.",
       features: [
-        "Candidate delivery within 12–24 hours",
-        "Careful shortlisting based on role requirements",
-        "Comprehensive screening & background verification",
-        "Skill assessment tests with scored resumes",
-        "Cultural fit evaluation for long-term success",
-        "Priority shortlisting & featured listings",
-        "Dedicated hiring dashboard for easy tracking",
-        "Interview coordination & onboarding support",
-        "Dedicated WhatsApp & call support",
-        "Weekly reports on selected & rejected candidates",
+       "Candidate delivery within 12–24 hours for most roles.",
+       "Thorough shortlisting based on your job requirements and ideal candidate profile.",
+       "Comprehensive screening to ensure reliability and trust.",
+       "Cultural fit analysis to ensure long-term retention and performance.",
+       "Priority sourcing & shortlisted candidate recommendations for urgent positions.",
+       "Dedicated hiring manager .",
+       "End-to-end interview coordination & onboarding assistance.",
+       "Personalized WhatsApp and phone support throughout the hiring process.",
+       "Weekly performance reports detailing shortlisted, selected, and rejected candidates.",
+        
       ],
       details: {
         process: "Our talent acquisition team handles the entire hiring process, combining industry expertise with a focus on speed and quality. We align with your company’s needs and culture to deliver the right candidates efficiently.",
         benefits: [
-          "Reduce time-to-hire by up to 60%",
-          "Improve candidate quality by 40% through detailed screening",
-          "Lower recruitment costs by 35% with efficient processes",
-          "Increase retention rates by 25% with culture-fit hiring",
-          "Unlimited job postings and access to unlimited candidates",
-          "Dedicated hiring dashboard to track progress",
-          "Industry-specific expertise across , Finance, Retail, Marketing ets",
-          "Priority shortlisting & featured listings for faster closures",        ]
+          "Reduce your time-to-hire by up to 60% with rapid candidate delivery and efficient coordination.",
+          "Enhance candidate quality by 40% through detailed shortlisting, screening, and assessments.",
+          "Cut recruitment costs by up to 90% compared to traditional consultancies.",
+          "Improve retention rates by 25% through culture-fit and long-term suitability evaluation.",
+          "Fulfill your complete recruitment needs at a predictable monthly cost  without per-hire charges",
+          "Stay informed at every stage with weekly performance reports on shortlisted, selected, and rejected candidates",
+          "Leverage domain expertise across Finance, Retail, Marketing, BPO, and IT sectors.",
+          "Enjoy priority shortlisting & featured listings to close positions faster.",
+          ]
       }
     }
   ];
@@ -216,7 +217,7 @@ const [billingPeriod, setBillingPeriod] = useState("monthly");
 
 
       <div className="text-center py-12 bg-muted/20" data-aos="fade-up">
-            <h2 className="text-3xl font-bold mb-4">Choose Your Subscription</h2>
+            <h2 className="text-3xl font-bold mb-4">Choose Your Flat Fee Plan</h2>
             <p className="text-muted-foreground mb-8">
               Flexible pricing options designed to grow with your business
             </p>

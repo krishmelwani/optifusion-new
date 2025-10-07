@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import logo from '../assets/optifusion-removebg-preview.png'
@@ -123,24 +123,35 @@ export const Footer = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-4">
               <Button size="sm" variant="outline" className="w-9 h-9 p-0 rounded-full btn-glass">
+                <a href="https://www.linkedin.com/company/optifusion-technologiess/" target="_blank">
                 <Linkedin className="w-4 h-4" />
+                </a>
               </Button>
-              <Button size="sm" variant="outline" className="w-9 h-9 p-0 rounded-full btn-glass">
+              {/* <Button size="sm" variant="outline" className="w-9 h-9 p-0 rounded-full btn-glass">
                 <Twitter className="w-4 h-4" />
               </Button>
               <Button size="sm" variant="outline" className="w-9 h-9 p-0 rounded-full btn-glass">
                 <Facebook className="w-4 h-4" />
+              </Button> */}
+              <Button size="sm" variant="outline" className="w-9 h-9 p-0 rounded-full btn-glass">
+                 <a
+                    href="https://www.instagram.com/optifusiontechnologies?igsh=bnQ5ajduOGVyMDhz&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram className="w-4 h-4" />
+                </a>
               </Button>
             </div>
 
             {/* Legal Links */}
             <div className="flex items-center space-x-6 text-sm">
-              <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="/Optifusion_Privacy_Policy_Detailed.pdf" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+              </a>
+              <a href="/Optifusion_Terms_and_Conditions_Detailed.pdf" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
                 Terms of Service
-              </Link>
+              </a>
             </div>
           </div>
         </div>

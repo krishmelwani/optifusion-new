@@ -45,41 +45,56 @@ const scrollRef = useRef(null);
 
   const testimonials = [
     {
-      name: "Priya Malhotra",
-      role: "CraftNest Interiors – Co-Founder",
-      content: "We struggled to close key roles for months, they solved it in weeks. Smooth process, zero stress.",
+      
+      name: "Ridhi agarwal",
+      role: "Talent Acquisition Manager, VoiceConnect BPO Indore",
+      content: "We had a high volume hiring requirement and Optifusion managed it perfectly Their recruiter provided shortlisted candidates quickly and helped us close positions on time The support and professionalism were consistent from start to end",
       rating: 5
     },
     {
-      name: "Rohit Sharma",
-      role: "BluePeak Logistics – Director",
-      content: "Their HR consulting gave us clarity on policies and compliance—we finally feel structured.",
+
+      name: "Shruti Mehta",
+      role: "Senior HR Specialist, DigiPulse Solutions Pvt Ltd Ahmedabad",
+      content: "Optifusion has simplified our entire recruitment process Their recruiter is attentive and always ensures we receive the right profiles for each role We have successfully closed multiple positions with their help in a short span of time",
+      rating: 5
+    },
+   
+    {
+      name: "Rajesh Khanna",
+      role: "HR Lead, BrightEdge Analytics Pvt Ltd Gurgaon",
+      content: " We opted for their annual plan since we hire throughout the year It has been a convenient and cost effective solution Their recruiter provides detailed updates every week and makes sure the positions are closed within timelines We are very satisfied with their service",
       rating: 5
     },
     {
-      name: "Meena Joshi",
-      role: "FreshFarm Foods Pvt. Ltd. – HR Manager",
-      content: "Great mix of professionalism and warmth. They don’t just recruit, they really understand your culture.",
+      name: "Neha Verma",
+      role: "HR Lead, MedAxis Healthcare Pvt Ltd Delhi",
+      content: "Our hospital tied up with Optifusion for operations and admin staff hiring We went with their monthly plan and within the first week we started getting relevant profiles The team is polite and very professional",
       rating: 5
     },
-    {
-      name: "Sandeep Verma",
-      role: "TechHive Digital – CEO",
-      content: "Our startup was drowning in hiring chaos, they brought order and quality candidates.",
-      rating: 5
-    },
-    {
-      name: "Pooja Kapoor",
-      role: "SkillEdge Learning – Founder",
-      content: "They redesigned our hiring funnel and we instantly noticed better candidate quality.",
-      rating: 5
-    },
-    {
-      name: "Amit Chauhan",
-      role: "BrightPath Consulting – Managing Partner",
-      content: "Perfect partner for small businesses like ours—we got HR support without needing a full-time HR.",
-      rating: 5
-    }
+     {
+    "name": "Manoj Iyer",
+    "role": "HR Business Partner, BioSure Pharmaceuticals, Mumbai",
+    "content": "The pricing model offered by Optifusion works very well for us. It is cost effective compared to traditional consultancy models and gives us the flexibility to hire multiple roles. Their service quality and timely response make them easy to work with.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil Tiwari",
+    "role": "HR Head, BuildRight Realty Pvt Ltd, Gurgaon",
+    "content": "Our company required business development executives and admin roles across multiple cities. Optifusion handled multi-location hiring efficiently. The team coordinated interviews perfectly and provided complete updates throughout.",
+    "rating": 5
+  },
+  {
+    "name": "Shreya Metha",
+    "role": "Senior HR Specialist, StyleMart Retail Pvt Ltd, Ahmedabad",
+    "content": "We have been working with Optifusion for over three months now and the experience has been excellent. Their recruiter is proactive and shares relevant candidates very fast. The best part is we can hire as per our need without worrying about extra cost.",
+    "rating": 5
+  },
+  {
+    "name": "Pooja Iyer",
+    "role": "HR Business Partner, FreshVale Consumer Products, Mumbai",
+    "content": "Optifusion has been supporting our sales and distribution hiring for over six months. The recruiter team is responsive and shares strong profiles within timelines. We also find their flat pricing model very reasonable and simple to manage.",
+    "rating": 5
+  }
   ];
 
 
@@ -141,9 +156,6 @@ const scrollRef = useRef(null);
     </div>
   </div>
 </section>
-
-
-
 
 
       {/* Why Choose Us */}
@@ -222,14 +234,14 @@ Our transparent and collaborative process keeps you informed at every stage. By 
             key={index}
             className="flex-shrink-0 w-[250px]  md:w-[400px] scroll-snap-align-start "
           data-aos='fade-right'>
-            <Card className="glass hover-lift fade-in-up min-h-[350px] md:min-h-[250px] hover:drop-shadow-[0px_0px_4px_rgba(255,255,255,0.5)]" >
+            <Card className="glass hover-lift fade-in-up min-h-[350px] md:min-h-[300px] hover:drop-shadow-[0px_0px_4px_rgba(255,255,255,0.5)]" >
               <CardContent className="p-8">
                 <p className="text-muted-foreground mb-6 italic">
                   "{testimonial.content}"
                 </p>
-                <div className="mt-16">
+                <div className="mt-8">
                   <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-muted-foreground truncate">
                     {testimonial.role}
                   </div>
                 </div>

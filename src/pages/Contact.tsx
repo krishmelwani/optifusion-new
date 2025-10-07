@@ -60,11 +60,10 @@ const Contact = () => {
   ];
 
   const budgetRanges = [
-    "Under $10k",
-    "$10k - $25k",
-    "$25k - $50k",
-    "$50k - $100k",
-    "$100k+",
+    "Under ₹10k",
+    "₹10k - ₹30k",
+    "₹30k - ₹50k",
+    "₹50k+",
     "Let's discuss"
   ];
 
@@ -225,7 +224,7 @@ const handleSubmit = async (e) => {
               <CardHeader>
                 <CardTitle className="text-3xl gradient-text flex items-center">
                   <MessageSquare className="w-8 h-8 mr-3" />
-                  Send Us a Message
+                  Get The Quotation
                 </CardTitle>
                 <p className="text-muted-foreground">
                   Fill out the form below and we'll get back to you within 24 hours.
@@ -239,7 +238,7 @@ const handleSubmit = async (e) => {
                       <Input
                         value={formData.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
-                        placeholder="John Doe"
+                        placeholder="Mukesh Sharma"
                         required
                         className="glass"
                       />
@@ -250,7 +249,7 @@ const handleSubmit = async (e) => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        placeholder="john@company.com"
+                        placeholder="mail@company.com"
                         required
                         className="glass"
                       />
@@ -273,7 +272,7 @@ const handleSubmit = async (e) => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 97xxxxxxx"
                         className="glass"
                       />
                     </div>

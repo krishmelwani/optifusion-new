@@ -13,26 +13,26 @@ const Team = () => {
       name: "Krish Melwani",
       role: "Founder & CEO",
       bio: "Started Optifusion Technologies in 2024 with the vision of simplifying hiring for businesses. Passionate about building long-term partnerships with companies and helping candidates find the right opportunities.",
-      image: "/founder.jpg",
+      image: "/krishmelwani.jpg",
       skills: ["Business Strategy","Client Relations", "Growth Planning"],
       social: {
-        linkedin: "#",
-        twitter: "#",
-        email: ""
+        linkedin: "https://www.linkedin.com/in/krish-s-540078386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        // instagram: "#",
+        // email: ""
       }
     },
-    {
-      name: "Harshita mishra",
-      role: "Head of talent acquisition", 
-      bio: "Leads the HR team with a focus on recruitment, compliance, and employee engagement. Brings strong expertise in talent management and ensuring smooth HR operations for clients.",
-      image: "/harshita.jpg",
-      skills: ["Recruitment Strategy","HR Operations","Employee Relations"],
-      social: {
-        linkedin: "#",
-        github: "#",
-        email: ""
-      }
-    },
+    // {
+    //   name: "Harshita mishra",
+    //   role: "Head of talent acquisition", 
+    //   bio: "Leads the HR team with a focus on recruitment, compliance, and employee engagement. Brings strong expertise in talent management and ensuring smooth HR operations for clients.",
+    //   image: "/harshita.jpg",
+    //   skills: ["Recruitment Strategy","HR Operations","Employee Relations"],
+    //   social: {
+    //     linkedin: "#",
+    //     github: "#",
+    //     email: ""
+    //   }
+    // },
     {
       name: "Prince",
       role: "Talent Acquisition Specialist",
@@ -40,9 +40,9 @@ const Team = () => {
       image: "/prince.jpg",
       skills: ["Candidate Sourcing","Screening & Hiring","Industry Research"],
       social: {
-        linkedin: "#",
-        twitter: "#",
-        email: ""
+        // linkedin: "#",
+        // twitter: "#",
+        // email: ""
       }
     },
     {
@@ -52,8 +52,8 @@ const Team = () => {
       image: "/shourav.jpg",
       skills: ["HR Compliance", "Change Management", "Policy Development"],
       social: {
-        linkedin: "#",
-        email: ""
+        // linkedin: "#",
+        // email: ""
       }
     },
    
@@ -113,7 +113,7 @@ const Team = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card 
                 key={index} 
@@ -138,11 +138,14 @@ const Team = () => {
                     }`}>
                       {member.social.linkedin && (
                         <Button size="sm" variant="secondary" className="w-10 h-10 p-0 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 border-0">
+                          <a href={member.social.linkedin} target="_blank">
                           <Linkedin className="w-4 h-4 text-white" />
+                          </a>
                         </Button>
                       )}
                       {member.social.twitter && (
                         <Button size="sm" variant="secondary" className="w-10 h-10 p-0 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 border-0">
+
                           <Twitter className="w-4 h-4 text-white" />
                         </Button>
                       )}

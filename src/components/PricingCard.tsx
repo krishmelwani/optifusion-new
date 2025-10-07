@@ -3,44 +3,47 @@ import { Check } from "lucide-react";
 
 const pricingPlans = {
   monthly: {
-    name: "monthly",
+    name: "Starter",
     price: "₹7,500",
     benefit: "Pay month-to-month",
     features: [
-      "Unlimited Job Postings & Candidates",
-      "Dedicated Hiring Dashboard",
-      "Priority Shortlisting & Featured Listings",
-      "Interview & Onboarding Support",
-      "Dedicated WhatsApp and call support",
-      "Skill Assessment Tests (Included) Resume with score",
+      "Up to 5 Active Roles per month.",
+      "40 Pre-screened Candidates delivered after internal interview and capability checks.",
+      "Initial Screening & Shortlisting based on your specific role requirements.",
+      "Dedicated Recruiter and  Manager for full-cycle hiring support",
+      "Turnaround Time: 2-3 days per role ",
+      "Replacement Period: 15 days",
+      "Reporting: Regular email updates on candidate progress."
+      
     ],
   },
 
   quarterly: {
-    name: "quarterly",
+    name: "Growth",
     price: "₹20,000",
-    benefit: "Save ₹2,500 (≈₹6,666/month)",
+    benefit: "Pay quaterly-to-quaterly",
     features: [
-      "Unlimited Job Postings & Candidates",
-      "Dedicated Hiring Dashboard",
-      "Priority Shortlisting & Featured Listings",
-      "Interview & Onboarding Support",
-      "Dedicated WhatsApp and call support",
-      "Skill Assessment Tests (Included) Resume with score",
+      "Up to 15 Active Roles at a time.",
+      "150 Pre-screened Candidates delivered after internal interview and capability checks ( per quarter )",
+      "Initial Screening & Shortlisting based on your specific role requirements.",
+      "Dedicated Recruiter and  Manager for full-cycle hiring support.",
+      "Turnaround Time: 2-3 days per role.",
+      "Replacement Period: 15 days.",
+      "Reporting: Detailed weekly performance reports.",
     ],
   },
 
   yearly: {
-    name: "yearly",
+    name: "Enterprise",
     price: "₹65,500",
-    benefit: "Save ₹25,000 (≈₹5,416/month)",
+    benefit: "Pay yearly-to-yearly",
     features: [
-      "Unlimited Job Postings & Candidates",
-      "Dedicated Hiring Dashboard",
-      "Priority Shortlisting & Featured Listings",
-      "Interview & Onboarding Support",
-      "Dedicated WhatsApp and call support",
-      "Skill Assessment Tests (Included) Resume with score",
+      "Up to 50 Total Roles (max 15 active at a time).",
+      "600 Pre-screened Candidates delivered after internal interview and capability checks. ( Per Year )",
+      "Initial Screening & Shortlisting based on your specific role requirements.",
+      "Dedicated Recruiter and  Manager for full-cycle hiring support.",
+      "Turnaround Time: 2–3 days per role.",
+      "Replacement Period: 15 Days",
     ],
   },
 };
@@ -79,8 +82,8 @@ export default function PricingCard() {
 
         {/* Price */}
         <div className="flex items-baseline gap-1 mb-6">
-          <span className="text-4xl font-bold">{plan.price}</span>
-          <span className="text-gray-400">/plan</span>
+          {/* <span className="text-4xl font-bold">{plan.price}</span> */}
+          {/* <span className="text-gray-400">/plan</span> */}
         </div>
 
         {/* Features */}
@@ -99,7 +102,7 @@ export default function PricingCard() {
 
         {/* CTA */}
         <button className="mt-6 w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-medium hover:opacity-90 transition">
-          Get Started
+          Get Quotation
         </button>
       </div>
     </div>
