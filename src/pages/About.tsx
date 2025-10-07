@@ -181,7 +181,7 @@ const About = () => {
                         <div className="text-sm text-muted-foreground">Founded</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={500} suffix={"+"} /></div>
+                        <div className="text-3xl font-bold  text-violet-600 mb-2"> <AnimatedCounter end={5000} suffix={"+"} /></div>
                         <div className="text-sm text-muted-foreground">Placements</div>
                       </div>
                       <div>
@@ -227,8 +227,8 @@ const About = () => {
                 <Eye className="w-12 h-12 mx-auto mb-4 text-secondary" />
                 <h3 className="text-2xl font-bold mb-4 gradient-text">Our Vision</h3>
                 <p className="text-muted-foreground">
-                  To be the global leader in AI-powered HR consulting, transforming how companies 
-                  connect with talent and build high-performing teams.
+                 Our vision is to redefine modern recruitment through innovation, transparency, and performance-driven hiring.
+                  We aim to bridge the gap between companies and the right talent. By empowering businesses with trusted hiring solutions, we strive to become India’s most reliable recruitment partner.
                 </p>
               </CardContent>
             </Card>

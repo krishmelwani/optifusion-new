@@ -1,3 +1,4 @@
+// api/proxy.js
 import express from "express";
 import cors from "cors";
 import fetch from "node-fetch";
@@ -5,12 +6,11 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(cors()); // allow all origins
+app.use(cors());
 app.use(express.json());
 
 app.post("/proxy", async (req, res) => {
   const googleURL = process.env.VITE_GOOGLESHEETURL;
-
   try {
     const response = await fetch(googleURL, {
       method: "POST",
@@ -23,15 +23,12 @@ app.post("/proxy", async (req, res) => {
       const json = JSON.parse(text);
       res.json(json);
     } catch {
-      res.send(text);
+      res.status(200).send(text);
     }
   } catch (err) {
     res.status(500).json({ error: "Proxy failed", details: err.message });
   }
 });
 
-app.get("/", (req, res) => {
-  res.send("Hi optifusion");
-});
-
-app.listen(3000, () => console.log("Server running on port 3000"));
+// export default app (no app.listen!)
+export default app;
