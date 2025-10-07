@@ -52,11 +52,11 @@ const Contact = () => {
 
   const serviceOptions = [
     "Talent Acquisition",
-    "HR Consulting", 
-    "Workforce Analytics",
-    "Executive Search",
-    "HR Technology Implementation",
-    "Other"
+    // "HR Consulting", 
+    // "Workforce Analytics",
+    // "Executive Search",
+    // "HR Technology Implementation",
+    // "Other"
   ];
 
   const budgetRanges = [
