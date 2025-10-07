@@ -81,37 +81,61 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    toast({
-      title: "Message Sent Successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      service: "",
-      message: "",
-      budget: "",
-      timeline: ""
-    });
-
-    setIsSubmitting(false);
-  };
+ 
+console.log(formData);
 
 
    const handleWhatsApp = ()=>{
     window.open("https://wa.me/919928610677", "_blank")
   }
   
+
+
+
+  // send contact form data to googlesheet  
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+       mode: "cors",
+    });
+
+    const result = await response.json();
+    console.log(result)
+    if (result.status === 'success') {
+      alert('✅ Message sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
+        message: '',
+      });
+    } else {
+      alert('⚠️ Something went wrong. Please try again.');
+    }
+  } catch (error) {
+    console.error(error);
+    alert('❌ Failed to send message. Please try again later.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+
+
+
+
+
   return (
     <div className="pt-20">
       <ScrollAnimations />

@@ -139,7 +139,7 @@ const About = () => {
               About  Optifusion Technologies
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 " style={{ animationDelay: '0.2s' }} data-aos="zoom-in">
-              Founded in 2022, we're transforming the HR landscape with innovative solutions 
+              Founded in 2024, we're transforming the HR landscape with innovative solutions 
               that bridge the gap between exceptional talent and forward-thinking companies.
             </p>
           </div>
