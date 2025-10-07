@@ -35,7 +35,7 @@ const scrollRef = useRef(null);
   }, []);
 
   const achievements = [
-    { icon: Users, label: "Candidates Placed", value: 500, suffix: "+" },
+    { icon: Users, label: "Candidates Placed", value: 5000, suffix: "+" },
     { icon: Award, label: "Companies Served", value: 50, suffix: "+" },
     { icon: TrendingUp, label: "Success Rate", value: 95, suffix: "%" },
     { icon: Star, label: "Client Rating", value: 4.9, suffix: "/5" },

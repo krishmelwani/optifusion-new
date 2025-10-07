@@ -146,12 +146,12 @@ export const Footer = () => {
 
             {/* Legal Links */}
             <div className="flex items-center space-x-6 text-sm">
-              <a href="/Optifusion_Privacy_Policy_Detailed.pdf" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/privacypolicy"  className="text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
-              </a>
-              <a href="/Optifusion_Terms_and_Conditions_Detailed.pdf" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+              </Link>
+              <Link to="/termsofservice" className="text-muted-foreground hover:text-primary transition-colors">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

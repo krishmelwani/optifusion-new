@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const pricingPlans = {
   monthly: {
@@ -101,9 +102,9 @@ export default function PricingCard() {
         </ul>
 
         {/* CTA */}
-        <button className="mt-6 w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-medium hover:opacity-90 transition">
+        <Link to={"/contact#contactform"} className="mt-6 w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-medium hover:opacity-90 transition">
           Get Quotation
-        </button>
+        </Link>
       </div>
     </div>
   );

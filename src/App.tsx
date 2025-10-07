@@ -7,6 +7,8 @@ import { Navigation } from "@/components/Navigation";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { Footer } from "@/components/Footer";
 import WatchDemo from './components/WatchDemo'
+import PrivacyPolicy from "@/components/PrivacyPolicy"
+import TermsOfService from "@/components/TermsOfService"
 // Pages
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -57,6 +59,8 @@ const App = () =>{
               <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/watchdemo" element={<WatchDemo />} />
+              <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+              <Route path="/termsofservice" element={<TermsOfService />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

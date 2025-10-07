@@ -78,6 +78,17 @@ const Team = () => {
     }
   ];
 
+
+  const joinWhatsAppGroup =()=> {
+  window.open(
+    "https://chat.whatsapp.com/BRww5ACEYBxCuEa9SCvCTT",
+    "_blank"
+  );
+}
+
+
+
+
   return (
     <div className="pt-20">
       <ScrollAnimations />
@@ -225,7 +236,8 @@ const Team = () => {
                 connecting great people with great opportunities. Ready to make an impact?
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="btn-primary text-lg px-8 py-4">
+                <Button size="lg" className="btn-primary text-lg px-8 py-4" onClick={joinWhatsAppGroup}>
+
                   View Open Positions
                 </Button>
                 <Button size="lg" variant="outline" className="btn-glass text-lg px-8 py-4">
@@ -242,11 +254,11 @@ const Team = () => {
         <div className="container mx-auto px-6" data-aos="fade-up">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="fade-in-up">
-              <div className="text-4xl font-bold gradient-text mb-2">6+</div>
+              <div className="text-4xl font-bold gradient-text mb-2">15+</div>
               <div className="text-muted-foreground">Team Members</div>
             </div>
             <div className="fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <div className="text-4xl font-bold gradient-text mb-2">50+</div>
+              <div className="text-4xl font-bold gradient-text mb-2">6+</div>
               <div className="text-muted-foreground">Years Combined Experience</div>
             </div>
             <div className="fade-in-up" style={{ animationDelay: '0.2s' }}>
