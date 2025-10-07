@@ -99,7 +99,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await fetch(
-      `${import.meta.env.VITE_BACKEND_URL || '/backend'}/proxy`,
+      `${import.meta.env.VITE_BACKEND_URL}/proxy`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('hi everyone on my server');
+});
+
 app.post("/proxy", async (req, res) => {
   const googleURL = process.env.VITE_GOOGLESHEETURL;
   try {
@@ -30,5 +34,10 @@ app.post("/proxy", async (req, res) => {
   }
 });
 
+// // ✅ Start server locally
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+// });
 // export default app (no app.listen!)
 export default app;
